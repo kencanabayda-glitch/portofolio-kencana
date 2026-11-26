@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio | Kencana Bayda Jantoro</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1', // Indigo
+            accent: '#ec4899',  // Pink
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 font-['Plus_Jakarta_Sans']">
+
+  <!-- ================= HEADER & NAVIGASI ================= -->
+  <header class="fixed top-0 w-full z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        Keke<span class="text-slate-800 dark:text-white">.studio</span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex items-center space-x-8 font-medium text-sm">
+        <a href="#home" class="hover:text-primary transition">Home</a>
+        <a href="#about" class="hover:text-primary transition">Tentang Saya</a>
+        <a href="#projects" class="hover:text-primary transition">Karya & Proyek</a>
+        <a href="#contact" class="hover:text-primary transition">Kontak</a>
+        <button id="themeToggleDesktop" aria-label="Ganti Tema" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:ring-2 ring-primary transition">
+          🌙
+        </button>
+      </div>
+
+      <!-- Tombol Mobile (Theme + Hamburger) -->
+      <div class="flex items-center space-x-3 md:hidden">
+        <button id="themeToggleMobile" aria-label="Ganti Tema" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-sm">
+          🌙
+        </button>
+        <button id="navToggle" aria-label="Buka Menu" class="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Dropdown Menu Mobile -->
+    <div id="navMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-4 space-y-2">
+      <a href="#home" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Home</a>
+      <a href="#about" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Tentang Saya</a>
+      <a href="#projects" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Karya & Proyek</a>
+      <a href="#contact" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Kontak</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 max-w-6xl mx-auto">
+      <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left space-y-6">
+          <span class="inline-block py-1.5 px-4 rounded-full text-xs font-semibold tracking-wide uppercase bg-indigo-100 text-primary dark:bg-indigo-950/80 dark:text-indigo-300">
+            UI/UX Designer & Content Creator
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Halo, saya <br>
+            <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Kencana Bayda Jantoro</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto md:mx-0">
+            Siswa PPLG / RPL yang menggabungkan estetika desain antarmuka (UI/UX), storytelling konten digital, dan pengembangan web modern. Panggil saja <strong>Keke</strong>!
+          </p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-primary hover:bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/30 transition">
+              Lihat Karya Saya
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-primary font-semibold transition">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+        <!-- Foto Profil -->
+        <div class="w-56 h-56 sm:w-72 sm:h-72 relative flex-shrink-0">
+          <div class="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-3xl rotate-6 opacity-30 blur-lg"></div>
+          <!-- EDIT DI SINI: Ganti src dengan "assets/img/profile.jpg" setelah kamu menaruh fotomu -->
+          <img src="https://placehold.co/400x400/6366f1/ffffff?text=Foto+Keke"
+               alt="Foto Profil Kencana Bayda Jantoro"
+               class="relative w-full h-full object-cover rounded-3xl border-4 border-white dark:border-slate-800 shadow-xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ME & SKILLS ================= -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800 px-4">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        <!-- Biodata -->
+        <div class="space-y-5">
+          <h2 class="text-3xl font-bold">Tentang Saya</h2>
+          <!-- EDIT DI SINI: Sesuaikan cerita singkat tentang minat desain & kontenmu -->
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Saya adalah siswa kelas XI jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) dengan ketertarikan besar pada bagaimana sebuah produk digital terlihat menarik sekaligus mudah digunakan.
+          </p>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Selain merancang wireframe dan prototipe antarmuka, saya juga aktif memproduksi konten kreatif yang informatif dan visual. Dalam proses kerja, saya memanfaatkan teknologi AI sebagai asisten produktivitas untuk mempercepat riset desain maupun debugging kode.
+          </p>
+
+          <!-- Highlight Statistik Konten Kreator -->
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-center">
+              <p class="text-2xl font-extrabold text-primary">UI/UX</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Fokus Desain</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-center">
+              <!-- EDIT DI SINI: Isi jumlah konten/followers/proyekmu nanti -->
+              <p class="text-2xl font-extrabold text-accent">10+</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Konten & Desain</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-center">
+              <p class="text-2xl font-extrabold text-primary">XI</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Siswa PPLG</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Keahlian (Skills) -->
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold">Keahlian & Tools</h3>
+          
+          <!-- Kategori 1: UI/UX & Content -->
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">UI/UX & Creative Content</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="skill-badge">Figma (Wireframe & Prototype)</span>
+              <span class="skill-badge">UI Visual Design</span>
+              <span class="skill-badge">Canva</span>
+              <span class="skill-badge">Video Editing (CapCut)</span>
+              <span class="skill-badge">Content Storytelling</span>
+            </div>
+          </div>
+
+          <!-- Kategori 2: Web & Workflow -->
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">Web Development & Workflow</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="skill-badge">HTML5 Semantik</span>
+              <span class="skill-badge">CSS3 & Tailwind CSS</span>
+              <span class="skill-badge">JavaScript Dasar</span>
+              <span class="skill-badge">AI-Assisted Coding & Prompting</span>
+              <span class="skill-badge">Git & GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO / PROJECTS ================= -->
+    <section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-12">
+        <h2 class="text-3xl font-bold">Karya & Proyek Pilihan</h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Kumpulan eksplorasi desain antarmuka, produksi konten digital, dan pengembangan web. Klik kartu untuk melihat detail studi kasus.
+        </p>
+
+        <!-- Tombol Filter Kategori (Interaktif JS) -->
+        <div class="flex flex-wrap justify-center gap-2 pt-4" id="filterButtons">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-sm font-semibold bg-primary text-white transition">
+            Semua Karya
+          </button>
+          <button data-filter="uiux" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white transition">
+            UI/UX Design
+          </button>
+          <button data-filter="content" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white transition">
+            Konten Kreator
+          </button>
+          <button data-filter="web" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-primary hover:text-white transition">
+            Web Project
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid Card Proyek (Di-render otomatis dari script.js) -->
+      <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-20 bg-white dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 px-4">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-5 gap-10">
+        <!-- Info Kontak & Sosmed -->
+        <div class="md:col-span-2 space-y-5">
+          <h2 class="text-3xl font-bold">Mari Berkolaborasi!</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Tertarik berdiskusi tentang desain UI/UX, pembuatan konten, atau proyek web? Kirim pesan melalui form atau hubungi media sosial saya.
+          </p>
+
+          <!-- EDIT DI SINI: Ganti "#" dengan link akun aslimu nanti -->
+          <div class="space-y-3 pt-2 text-sm font-medium">
+            <a href="#" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:text-primary transition">
+              <span>📸</span> Instagram: @username_keke
+            </a>
+            <a href="#" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:text-primary transition">
+              <span>🎵</span> TikTok / YouTube: @username_keke
+            </a>
+            <a href="#" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:text-primary transition">
+              <span>💻</span> GitHub: github.com/username_keke
+            </a>
+          </div>
+        </div>
+
+        <!-- Form Kontak dengan Validasi JS -->
+        <div class="md:col-span-3 bg-slate-50 dark:bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-700">
+          <form id="contactForm" class="space-y-4" novalidate>
+            <div>
+              <label for="senderName" class="block text-sm font-semibold mb-1">Nama Lengkap</label>
+              <input type="text" id="senderName" placeholder="Masukkan namamu"
+                     class="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            <div>
+              <label for="senderEmail" class="block text-sm font-semibold mb-1">Email</label>
+              <input type="email" id="senderEmail" placeholder="nama@email.com"
+                     class="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            <div>
+              <label for="senderMessage" class="block text-sm font-semibold mb-1">Pesan</label>
+              <textarea id="senderMessage" rows="4" placeholder="Tulis pesan atau detail proyekmu..."
+                        class="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-xl bg-primary hover:bg-indigo-600 text-white font-semibold shadow-md transition">
+              Kirim Pesan
+            </button>
+            <!-- Notifikasi hasil submit -->
+            <p id="formFeedback" class="text-sm font-medium hidden pt-1"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-8 text-center text-sm text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
+    <p>&copy; 2026 Kencana Bayda Jantoro (Keke). Dibuat untuk Proyek PPLG.</p>
+  </footer>
+
+  <!-- ================= MODAL DETAIL PROYEK ================= -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+    <div class="bg-white dark:bg-slate-900 max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 animate-fadeIn">
+      <img id="modalImg" src="" alt="Preview Proyek" class="w-full h-56 object-cover">
+      <div class="p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span id="modalCategory" class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-indigo-100 text-primary dark:bg-indigo-950 dark:text-indigo-300"></span>
+          <button id="closeModal" class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-2xl leading-none">&times;</button>
+        </div>
+        <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+        <p id="modalDesc" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+        <div class="pt-2 flex justify-between items-center border-t border-slate-200 dark:border-slate-800">
+          <span id="modalTools" class="text-xs text-slate-500"></span>
+          <a id="modalLink" href="#" target="_blank" class="px-4 py-2 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-indigo-600 transition">
+            Lihat Proyek &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
